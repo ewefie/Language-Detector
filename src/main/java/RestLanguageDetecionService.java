@@ -48,7 +48,7 @@ public class RestLanguageDetecionService {
         Objects.requireNonNull(response.getBody())
                 .getDetections()
                 .getDetections()
-                .forEach(detection -> System.out.println("Language is " + detection.getLanguage() + " and is " + detection.getIsReliable()));
+                .forEach(detection -> System.out.println("Given text is a " + detection.getConfidence() + " % written in " + detection.getLanguage() + " language."));
     }
 }
 
